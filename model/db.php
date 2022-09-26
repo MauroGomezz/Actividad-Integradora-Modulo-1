@@ -5,7 +5,7 @@ class Conexion {
     private $con;
 
     public function __construct() {
-        $this->con = new mysqli('localhost','root','','biblioteca');
+        $this->con = new mysqli('b4oawkqgde9flgj8wzlq-mysql.services.clever-cloud.com','uf2k2gn6ounhbz6o','YKxc0rJpigNMBtLHLFRQ','b4oawkqgde9flgj8wzlq');
     }
 
     public function getLibros() {

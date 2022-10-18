@@ -12,5 +12,6 @@
             <li>La página que estás buscando cambió de ubicación o fue eliminada.</li>
         </ul>
     </div>
-    <p class="lead">Puedes volver a tu página de inicio si haces <a href="index.php?ruta=inicio" class=" text-decoration-none">click aquí</a></p>
+    <p class="lead">Puedes volver a tu página de inicio si haces <a href="index.php?ruta=inicio" class=" text-decoration-none">click aquí</a>.</p>
 </div>
+<?php include_once('./views./pie.php');?>

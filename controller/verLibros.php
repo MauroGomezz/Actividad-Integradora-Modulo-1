@@ -1,16 +1,26 @@
 <?php
-$con = new Conexion();
-$libro = [];
+require_once './model/./libros.model.php';
 
-if(isset($_POST['enviar'])) {
-    $busqueda = $_POST['busqueda'];
-    $libros = $con->getSearch($busqueda);
-} elseif(isset($_GET['info'])) {
-    $id = $_GET['id'];
-    $libro = $con->getInfo($id);
-    header("Location: infoLibro.php?id=$id");
-} else {
-    $libros = $con->getLibros();
+class ControladorLibros extends ModeloLibros{
+
+    public function ctrLibros() {
+        $libros = $this->getLibros();
+        return $libros;
+    }
+
+    public function ctrBusqueda() {
+            $busqueda = $_POST['busqueda'];
+            $libros = $this->getSearch($busqueda);
+            return $libros;
+    }
+
+    public function ctrInfo() {
+        if(isset($_GET['ruta']) == "infoLibro") {
+            $id = $_GET['id'];
+            $libro = $this->getInfo($id);
+            return $libro;
+        }
+    }
 }
 
 ?>

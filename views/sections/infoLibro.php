@@ -1,8 +1,8 @@
 <?php 
 require('./views/nav.php');
 require('././controller/verLibros.php');
-$id = $_GET['id'];
-$libro = $con->getInfo($id);
+$ctrLibros = new ControladorLibros;
+$libro = $ctrLibros->ctrInfo();
 ?>
 </div>
   </div>

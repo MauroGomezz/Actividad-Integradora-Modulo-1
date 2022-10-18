@@ -8,4 +8,5 @@
     <title>Biblioteca</title>
 </head>
 <body>
+    <?php session_start()?>
     
